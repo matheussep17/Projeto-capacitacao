@@ -1,0 +1,44 @@
+<!-- Título da página -->
+<h1 class="page-title">Pais</h1>
+
+<!-- Botão para cadastrar -->
+<button class="btn btn-primary mb-3" routerLink="/pais/novo">
+  Cadastrar
+</button>
+
+<!-- Lista de pais -->
+<table class="table table-bordered">
+  <!-- Cabeçalho da tabela -->
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th class="text-center col-md-2"></th>
+    </tr>
+  </thead>
+  <!-- Corpo da tabela -->
+  <tbody>
+    <tr *ngFor="let pais of paises">
+      <td>
+        <!-- Botão para visualizar -->
+        <button  class="btn btn-link" 
+          [routerLink]="['/pais/visualizar', pais.id]">
+          {{ pais.nome }}
+        </button>
+      </td>
+      <td class="text-center">
+        
+        <!-- Botão para editar -->
+        <button  class="btn btn-link" 
+          [routerLink]="['/pais/editar', pais.id]">
+          Editar
+        </button>
+        
+        <!-- Botão para deletar -->
+        <button  class="btn btn-link" 
+          (click)="onDelete(pais.id)">
+          Deletar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
