@@ -1,0 +1,47 @@
+
+<!-- Títuto da página -->
+<h1 class="page-title">Carro</h1>
+
+<!-- Botão para cadastrar -->
+<button class="btn btn-primary mb-3" routerLink="/carro/novo">
+  Cadastrar
+</button>
+
+<!-- Lista de garagens -->
+<table class="table table-bordered">
+  <!-- Cabeçalho da tabela -->
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th class="text-center">Carro</th>
+      <th class="text-center col-md-2"></th>
+    </tr>
+  </thead>
+  <!-- Corpo da tabela -->
+  <tbody>
+    <tr *ngFor="let carro of carros">
+      <td>
+        <!-- Botão para visualizar -->
+        <button class="btn btn-link" 
+          [routerLink]="['/carro/visualizar', carro.id]">
+          {{ carro.nome }}
+        </button>
+      </td>
+      <td class="text-center">{{ carro.endereco.pais.nome }}</td>
+      <td class="text-center">
+
+        <!-- Botão para editar -->
+        <button class="btn btn-link"
+          [routerLink]="['/carro/editar', garagem.id]">
+          Editar
+        </button>
+
+        <!-- Botão para deletar -->
+        <button class="btn btn-link"
+          (click)="onDelete(carro.id)">
+          Deletar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

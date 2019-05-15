@@ -58,7 +58,7 @@ export class GaragemFormComponent implements OnInit {
 
     // Busca a mantenedora caso seja o formulário de editar ou visualizar
     if (this.garagem.id) {
-      this.garagemService.findById(this.garagem.id).subscribe(mantenedora => this.garagemForm.patchValue(mantenedora));
+      this.garagemService.findById(this.garagem.id).subscribe(garagem => this.garagemForm.patchValue(garagem));
     }
 
     // Verifica se o formulário seja visualizar
@@ -92,7 +92,7 @@ export class GaragemFormComponent implements OnInit {
       // Se o formulário estiver válido
 
       // Salva os dados na API
-      this.garagemService.save(garagem).subscribe(mantenedora => {
+      this.garagemService.save(garagem).subscribe(garagem => {
         // Alerta com a mensagem de sucesso
         this.alertService.success('Garagem salva com sucesso!');
 

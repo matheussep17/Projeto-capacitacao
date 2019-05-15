@@ -1,3 +1,4 @@
+import { CarroModule } from './domain/carro/carro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -18,7 +19,8 @@ import { GaragemModule } from './domain/garagem/garagem.module';
     HttpClientModule,
     NgbModule,
     CoreModule,
-    GaragemModule
+    GaragemModule,
+    CarroModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
