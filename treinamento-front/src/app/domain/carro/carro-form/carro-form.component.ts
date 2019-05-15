@@ -49,9 +49,9 @@ export class CarroFormComponent implements OnInit {
         cor: ['', Validators.required],
         valor: ['', Validators.required],
         modelo: ['', Validators.required],
-        garagem: this.builder.group({
-        nome: ['', Validators.required]
-        })
+        garagem: ['', Validators.required]
+       
+        
       },{}
     );
 
