@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <i class="navbar-brand" href="#">Treinamento</i>
+  <i class="navbar-brand" href="#">BMW</i>
   <button
     class="navbar-toggler hidden-sm-up"
     type="button"
@@ -14,14 +14,19 @@
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <i class="nav-link">Home</i>
+        <a class="nav-link">Home</a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="garagem">Garagem</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="pais">Pais</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="carro">Carro</a>
       </li>
     </ul>
   </div>
