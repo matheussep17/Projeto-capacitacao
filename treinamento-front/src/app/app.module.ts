@@ -1,3 +1,4 @@
+import { DashboardModule } from './domain/dashboard/dashboard.module';
 import { CarroModule } from './domain/carro/carro.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,9 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { GaragemModule } from './domain/garagem/garagem.module';
+import { DashboardComponent } from './domain/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,6 +23,7 @@ import { GaragemModule } from './domain/garagem/garagem.module';
     CoreModule,
     GaragemModule,
     CarroModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
