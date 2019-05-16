@@ -1,5 +1,4 @@
 import { Garagem } from './../garagem/garagem';
-import { CarroModule } from './carro.module';
 
 export class Carro {
     id: number;

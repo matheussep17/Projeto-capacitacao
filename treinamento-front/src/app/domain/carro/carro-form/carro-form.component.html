@@ -47,7 +47,7 @@
 
 
         <div class="col-md-6 col-lg-4">
-          <field label="Estado" required="true">
+          <field label="Modelo" required="true">
             <input type="modelo" class="form-control" formControlName="modelo">
           </field>
         </div>
@@ -56,7 +56,7 @@
         <div class="col-md-6 col-lg-4">
           <field label="garagem" required="true">
             <select class="form-control" formControlName="garagem" [compareWith]="compareFn">
-              <option></option>
+              <option value="" hidden>Selecione uma opção</option>>
               <option *ngFor="let garagem of garagens" [ngValue]="garagem">{{ garagem.nome }}</option>
             </select>
           </field>

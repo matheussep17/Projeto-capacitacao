@@ -69,7 +69,7 @@
           <div class="col-md-6 col-lg-4">
             <field label="Pais" required="true">
              <select class="form-control" formControlName="pais" [compareWith]="compareFn">
-              <option></option>
+              <option value="" hidden>Selecione uma opção</option>
               <option *ngFor="let pais of paises" [ngValue]="pais">{{ pais.nome }}</option>
              </select>
             </field>
