@@ -1,4 +1,3 @@
-
 <!-- Títuto da página -->
 <h1 class="page-title">Carro</h1>
 
@@ -12,7 +11,7 @@
   <!-- Cabeçalho da tabela -->
   <thead>
     <tr class="thead-dark">
-      <th class="text-center">Nome</th>
+      <th class="text-center">Fabricante</th>
       <th class="text-center">Carro</th>
       <th class="text-center">Ações</th>
       <th class="text-center col-md-2"></th>
@@ -23,23 +22,19 @@
     <tr *ngFor="let carro of carros">
       <td>
         <!-- Botão para visualizar -->
-        <button class="btn btn-link" 
-          [routerLink]="['/carro/visualizar', carro.id]">
+        <button class="btn btn-link" [routerLink]="['/carro/visualizar', carro.id]">
           {{ carro.nome }}
         </button>
       </td>
       <td class="text-center">{{ carro.endereco.pais.nome }}</td>
       <td class="text-center">
-
         <!-- Botão para editar -->
-        <button class="btn btn-link"
-          [routerLink]="['/carro/editar', garagem.id]">
+        <button class="btn btn-link" [routerLink]="['/carro/editar', garagem.id]">
           Editar
         </button>
 
         <!-- Botão para deletar -->
-        <button class="btn btn-link"
-          (click)="onDelete(carro.id)">
+        <button class="btn btn-link" (click)="onDelete(carro.id)">
           Deletar
         </button>
       </td>
