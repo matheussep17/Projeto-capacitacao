@@ -22,13 +22,13 @@
       <td>
         <!-- Botão para visualizar -->
         <button class="btn btn-link" [routerLink]="['/carro/visualizar', carro.id]">
-          {{ carro.nome }}
+          {{ carro.fabricante }}
         </button>
       </td>
-      <td class="text-center">{{ carro.endereco.pais.nome }}</td>
+      <td class="text-center">{{ carro.modelo }}</td>
       <td class="text-center">
         <!-- Botão para editar -->
-        <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', garagem.id]">
+        <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', carro.id]">
           Editar
         </button>
 
