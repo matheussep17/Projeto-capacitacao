@@ -1,39 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
-.page-title{
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 36px;
+.page-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 36px;
 }
 
-.nav-link.active{
-    background-color:#EEE;
-    color: #333 !important;
+.nav-link.active {
+  background-color: #eee;
+  color: #333 !important;
 }
 
 /* Classes do field component */
-.control-label.required:after { 
-    content: "*";
-    color:rgb(184, 32, 27);
-    font-size: 16px;
-    position: relative;
-    margin-top: 0px;
-    margin-left: 5px;  
+.control-label.required:after {
+  content: '*';
+  color: rgb(184, 32, 27);
+  font-size: 16px;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 5px;
 }
 
-.has-error .control-label{
-    color: rgb(184, 32, 27);
+.has-error .control-label {
+  color: rgb(184, 32, 27);
 }
 
 .has-error .form-control {
-    border-color: rgb(184, 32, 27);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  border-color: rgb(184, 32, 27);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-.help-block{
-    color: rgb(184, 32, 27);
+.help-block {
+  color: rgb(184, 32, 27);
 }
 
 .has-success .form-control {
-    border-color:rgb(14, 139, 14);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  border-color: rgb(14, 139, 14);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+body {
+  background: url('https://img.newatlas.com/nissan-gt-r50-11.jpg?auto=format%2Ccompress&ch=Width%2CDPR&fit=crop&h=347&q=60&rect=0%2C220%2C1080%2C607&w=616&s=f2f3aa000a7cb8ea831dee5083c9e735')
+    no-repeat center fixed;
+  background-size: cover;
+  backface-visibility: unset;
 }
