@@ -1,19 +1,13 @@
 package br.edu.unievangelica.ftt.treinamento.domain.carro;
 
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import br.edu.unievangelica.ftt.treinamento.core.entity.AbstractEntity;
-import br.edu.unievangelica.ftt.treinamento.domain.endereco.Endereco;
 import br.edu.unievangelica.ftt.treinamento.domain.garagem.Garagem;
 import lombok.Getter;
 import lombok.Setter;
@@ -56,7 +50,7 @@ public class Carro extends AbstractEntity {
     private String valor;
 
     @Valid
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "garagem_id", referencedColumnName = "id")
     private Garagem garagem;
 

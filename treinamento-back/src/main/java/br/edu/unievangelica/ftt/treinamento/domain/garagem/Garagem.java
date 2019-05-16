@@ -1,21 +1,20 @@
 package br.edu.unievangelica.ftt.treinamento.domain.garagem;
 
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import br.edu.unievangelica.ftt.treinamento.core.entity.AbstractEntity;
+import br.edu.unievangelica.ftt.treinamento.domain.carro.Carro;
 import br.edu.unievangelica.ftt.treinamento.domain.endereco.Endereco;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Table(name = "garagem")
@@ -34,5 +33,8 @@ public class Garagem extends AbstractEntity {
 	@JoinColumn(name = "endereco_id", referencedColumnName = "id")
 	private Endereco endereco;
 
-	
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "garagem")
+	private List<Carro> carros;
+
 }
