@@ -11,10 +11,9 @@
   <!-- Cabeçalho da tabela -->
   <thead>
     <tr class="thead-dark">
-      <th class="text-center">Fabricante</th>
-      <th class="text-center">Carro</th>
-      <th class="text-center">Ações</th>
-      <th class="text-center col-md-2"></th>
+      <th class="text-center col-ml-1">Fabricante</th>
+      <th class="text-center col-ml-1">Carro</th>
+      <th class="text-center col-ml-1">Ações</th>
     </tr>
   </thead>
   <!-- Corpo da tabela -->
@@ -29,12 +28,12 @@
       <td class="text-center">{{ carro.endereco.pais.nome }}</td>
       <td class="text-center">
         <!-- Botão para editar -->
-        <button class="btn btn-link" [routerLink]="['/carro/editar', garagem.id]">
+        <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', garagem.id]">
           Editar
         </button>
 
         <!-- Botão para deletar -->
-        <button class="btn btn-link" (click)="onDelete(carro.id)">
+        <button class="btn btn-primary ml-2" (click)="onDelete(carro.id)">
           Deletar
         </button>
       </td>

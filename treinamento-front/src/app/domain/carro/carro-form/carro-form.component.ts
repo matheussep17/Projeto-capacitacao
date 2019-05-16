@@ -42,7 +42,6 @@ export class CarroFormComponent implements OnInit {
     this.carroForm = this.builder.group(
       {
         id: [],
-     
         fabricante: ['', Validators.required],
         versao: ['', Validators.required],
         descricao: ['', Validators.required],
@@ -50,12 +49,11 @@ export class CarroFormComponent implements OnInit {
         valor: ['', Validators.required],
         modelo: ['', Validators.required],
         garagem: ['', Validators.required]
-       
-        
-      },{}
+      },
+      {}
     );
 
-    // Busca o carro caso seja o formulário de editar ou visualizar
+    // Busca a mantenedora caso seja o formulário de editar ou visualizar
     if (this.carro.id) {
       this.carroService.findById(this.carro.id).subscribe(carro => this.carroForm.patchValue(carro));
     }
@@ -69,10 +67,9 @@ export class CarroFormComponent implements OnInit {
       this.titulo = 'Visualizar';
     }
 
-    // Busca lista de garagens
+    // Busca lista de paises
     this.garagemService.findAll().subscribe(garagens => (this.garagens = garagens));
   }
-
   // Marca a opção selecionada no select
   compareFn(c1, c2): boolean {
     return c1 && c2 ? c1.id === c2.id : c1 === c2;
@@ -93,9 +90,9 @@ export class CarroFormComponent implements OnInit {
       // Salva os dados na API
       this.carroService.save(carro).subscribe(carro => {
         // Alerta com a mensagem de sucesso
-        this.alertService.success('Carro salva com sucesso!');
+        this.alertService.success('Carro salvo com sucesso!');
 
-        // Redireciona para lista de carros
+        // Redireciona para lista de mantenedoras
         this.router.navigate(['/carro']);
       });
     }

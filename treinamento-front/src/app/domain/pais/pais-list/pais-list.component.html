@@ -11,9 +11,8 @@
   <!-- Cabeçalho da tabela -->
   <thead>
     <tr class="thead-dark">
-      <th class="text-center">Nome</th>
-      <th class="text-center">Ações</th>
-      <th class="text-center col-md-2"></th>
+      <th class="text-center col-ml-1">Nome</th>
+      <th class="text-center col-ml-1">Ações</th>
     </tr>
   </thead>
   <!-- Corpo da tabela -->
@@ -21,22 +20,18 @@
     <tr *ngFor="let pais of paises">
       <td>
         <!-- Botão para visualizar -->
-        <button  class="btn btn-link" 
-          [routerLink]="['/pais/visualizar', pais.id]">
+        <button class="btn btn-link" [routerLink]="['/pais/visualizar', pais.id]">
           {{ pais.nome }}
         </button>
       </td>
       <td class="text-center">
-        
         <!-- Botão para editar -->
-        <button  class="btn btn-link" 
-          [routerLink]="['/pais/editar', pais.id]">
+        <button class="btn btn-primary ml-2" [routerLink]="['/pais/editar', pais.id]">
           Editar
         </button>
-        
+
         <!-- Botão para deletar -->
-        <button  class="btn btn-link" 
-          (click)="onDelete(pais.id)">
+        <button class="btn btn-primary ml-2" (click)="onDelete(pais.id)">
           Deletar
         </button>
       </td>
