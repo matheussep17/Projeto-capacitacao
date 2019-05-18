@@ -19,7 +19,7 @@
   <!-- Corpo da tabela -->
   <tbody>
     <tr *ngFor="let pais of paises">
-      <td>
+      <td class="text-center">
         <!-- Botão para visualizar -->
         <button class="btn btn-link" [routerLink]="['/pais/visualizar', pais.id]">
           {{ pais.nome }}

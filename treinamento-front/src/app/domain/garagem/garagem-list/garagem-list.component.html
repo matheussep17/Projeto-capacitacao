@@ -20,7 +20,7 @@
   <!-- Corpo da tabela -->
   <tbody>
     <tr *ngFor="let garagem of garagens">
-      <td>
+      <td class="text-center">
         <!-- Botão para visualizar -->
         <button class="btn btn-link" [routerLink]="['/garagem/visualizar', garagem.id]">
           {{ garagem.nome }}

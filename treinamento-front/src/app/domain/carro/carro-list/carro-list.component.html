@@ -21,7 +21,7 @@
     <!-- Corpo da tabela -->
     <tbody>
       <tr *ngFor="let carro of carros">
-        <td>
+        <td class="text-center">
           <!-- Botão para visualizar -->
           <button class="btn btn-link" [routerLink]="['/carro/visualizar', carro.id]">
             {{ carro.fabricante }}
