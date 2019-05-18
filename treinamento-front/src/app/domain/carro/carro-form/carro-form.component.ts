@@ -67,7 +67,7 @@ export class CarroFormComponent implements OnInit {
       this.titulo = 'Visualizar';
     }
 
-    // Busca lista de paises
+    // Busca lista de garagens
     this.garagemService.findAll().subscribe(garagens => (this.garagens = garagens));
   }
   // Marca a opção selecionada no select
@@ -92,7 +92,7 @@ export class CarroFormComponent implements OnInit {
         // Alerta com a mensagem de sucesso
         this.alertService.success('Carro salvo com sucesso!');
 
-        // Redireciona para lista de mantenedoras
+        // Redireciona para lista de carros
         this.router.navigate(['/carro']);
       });
     }

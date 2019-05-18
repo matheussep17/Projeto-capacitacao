@@ -1,44 +1,33 @@
 <div class="content-background p-2">
-<!-- Títuto da página -->
-<h1 class="page-title">Garagem</h1>
+  <h1 class="page-title">Garagem</h1>
 
-<!-- Botão para cadastrar -->
-<button class="btn btn-primary mb-3" routerLink="/garagem/novo">
-  Cadastrar
-</button>
+  <button class="btn btn-primary mb-3" routerLink="/garagem/novo">
+    Cadastrar
+  </button>
 
-<!-- Lista de garagens -->
-<table class="table table-dark">
-  <!-- Cabeçalho da tabela -->
-  <thead>
-    <tr>
-      <th class="text-center col-ml-1">Nome</th>
-      <th class="text-center col-ml-2">Pais</th>
-      <th class="text-center col-ml-1">Ações</th>
-    </tr>
-  </thead>
-  <!-- Corpo da tabela -->
-  <tbody>
-    <tr *ngFor="let garagem of garagens">
-      <td class="text-center">
-        <!-- Botão para visualizar -->
-        <button class="btn btn-link" [routerLink]="['/garagem/visualizar', garagem.id]">
-          {{ garagem.nome }}
-        </button>
-      </td>
-      <td class="text-center">{{ garagem.endereco.pais.nome }}</td>
-      <td class="text-center ">
-        <!-- Botão para editar -->
-        <button class="btn btn-primary ml-2" [routerLink]="['/garagem/editar', garagem.id]">
-          Editar
-        </button>
+  <!-- Lista de garagens -->
+  <table class="table table-dark">
 
-        <!-- Botão para deletar -->
-        <button class="btn btn-primary ml-2" (click)="onDelete(garagem.id)">
-          Deletar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <th class="text-center col-ml-1">Nome</th>
+        <th class="text-center col-ml-2">Pais</th>
+        <th class="text-center col-ml-1">Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let garagem of garagens">
+        <td class="text-center">
+          <button class="btn btn-link" [routerLink]="['/garagem/visualizar', garagem.id]">  {{ garagem.nome }} </button>
+       </td>
+
+        <td class="text-center">{{ garagem.endereco.pais.nome }}</td>
+        <td class="text-center ">
+          <button class="btn btn-primary ml-2" [routerLink]="['/garagem/editar', garagem.id]"> Editar </button>   
+          <button class="btn btn-primary ml-2" (click)="onDelete(garagem.id)"> Deletar </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

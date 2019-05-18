@@ -29,10 +29,10 @@ export class GaragemFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // Instancia uma nova mantenedora
+    // Instancia uma nova garagem
     this.garagem = new Garagem();
 
-    // Obtem ID da mantenedora pela URL
+    // Obtem ID da garagem pela URL
     this.garagem.id = this.route.snapshot.params['id'];
 
     // Define título da página
@@ -56,7 +56,7 @@ export class GaragemFormComponent implements OnInit {
       {}
     );
 
-    // Busca a mantenedora caso seja o formulário de editar ou visualizar
+    // Busca a garagem caso seja o formulário de editar ou visualizar
     if (this.garagem.id) {
       this.garagemService.findById(this.garagem.id).subscribe(garagem => this.garagemForm.patchValue(garagem));
     }
@@ -79,7 +79,7 @@ export class GaragemFormComponent implements OnInit {
     return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
-  // Método para salvar mantenedora
+  // Método para salvar a garagem
   onSave(garagem: Garagem) {
     // Verifica se o formulário esta inválido
     if (this.garagemForm.invalid) {
@@ -96,7 +96,7 @@ export class GaragemFormComponent implements OnInit {
         // Alerta com a mensagem de sucesso
         this.alertService.success('Garagem salva com sucesso!');
 
-        // Redireciona para lista de mantenedoras
+        // Redireciona para lista de garagens
         this.router.navigate(['/garagem']);
       });
     }

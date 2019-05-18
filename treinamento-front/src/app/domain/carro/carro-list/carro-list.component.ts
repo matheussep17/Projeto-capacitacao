@@ -17,19 +17,19 @@ export class CarroListComponent implements OnInit {
   constructor(private carroService: CarroService, private alertService: AlertService) {}
 
   ngOnInit() {
-    // Busca todas as mantenedoras
+    // Busca todas os carros
     this.carroService.findAll().subscribe(carros => (this.carros = carros));
   }
 
-  // Método para deleta uma mantenedora
+  // Método para deleta um carro
   onDelete(id: number) {
-    // Deleta mantenedora na API
+    // Deleta o carro na API
     this.carroService.deteleById(id).subscribe(() => {
-      // Remove a mantenedora da lista
+      // Remove o carro  da lista
       this.carros = this.carros.filter(carro => carro.id !== id);
 
       // Alerta com a mensagem de sucesso
-      this.alertService.success('Carro excluída com sucesso!');
+      this.alertService.success('Carro excluído com sucesso!');
     });
   }
 }
