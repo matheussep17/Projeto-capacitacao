@@ -8,12 +8,13 @@
   </button>
 
   <!-- Lista de garagens -->
-  <table class="table table-bordered">
+  <table class="table table-dark">
     <!-- Cabeçalho da tabela -->
     <thead>
       <tr class="thead-dark">
         <th class="text-center col-ml-1">Fabricante</th>
         <th class="text-center col-ml-1">Modelo</th>
+        <th class="text-center col-ml-1">Garagem</th>
         <th class="text-center col-ml-1">Ações</th>
       </tr>
     </thead>
@@ -27,6 +28,7 @@
           </button>
         </td>
         <td class="text-center">{{ carro.modelo }}</td>
+        <td class="text-center">{{ carro.garagem.nome }}</td>
         <td class="text-center">
           <!-- Botão para editar -->
           <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', carro.id]">
