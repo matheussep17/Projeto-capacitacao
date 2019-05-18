@@ -22,7 +22,7 @@
 }
 
 .has-error .control-label {
-  color: rgb(184, 32, 27);
+  color: rgb(255, 0, 0);
 }
 
 .has-error .form-control {
@@ -40,7 +40,7 @@
 }
 
 body {
-  background: url('https://img.newatlas.com/nissan-gt-r50-11.jpg?auto=format%2Ccompress&ch=Width%2CDPR&fit=crop&h=347&q=60&rect=0%2C220%2C1080%2C607&w=616&s=f2f3aa000a7cb8ea831dee5083c9e735')
+  background: url('https://etalent.com.br/wp-content/uploads/2017/10/etalent-pro-fundo.jpg')
   no-repeat center fixed;
   background-size: cover;
   backface-visibility: unset;
@@ -50,10 +50,7 @@ img{
   opacity: 0.7;
 }
 
-.content-background{
-  background: #333333cf;
-  min-width: 50rem;
-}
+
 
 label {
   cursor: pointer;
