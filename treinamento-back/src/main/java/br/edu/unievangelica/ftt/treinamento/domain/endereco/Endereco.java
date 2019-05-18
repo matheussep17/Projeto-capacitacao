@@ -8,6 +8,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,19 +26,24 @@ public class Endereco extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@NotEmpty
-	@Column(name = "logradouro", length = 80, nullable = false)
+	@Size(max = 80)
+	@Column(name = "logradouro", nullable = false)
 	private String logradouro;
-	
-	@Column(name = "complemento", length = 30)
+
+	@Size(max = 30)
+	@Column(name = "complemento")
 	private String complemento;
-	
-	@Column(name = "bairro", length = 30)
+
+	@Size(max = 30)
+	@Column(name = "bairro")
 	private String bairro;
-	
-	@Column(name = "cidade", length = 80)
+
+	@Size(max = 80)
+	@Column(name = "cidade")
 	private String cidade;
-	
-	@Column(name = "estado", length = 30)
+
+	@Size(max = 30)
+	@Column(name = "estado")
 	private String estado;
 	
 	@NotNull

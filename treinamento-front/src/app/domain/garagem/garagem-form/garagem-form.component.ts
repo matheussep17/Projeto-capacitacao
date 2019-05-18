@@ -42,7 +42,7 @@ export class GaragemFormComponent implements OnInit {
     this.garagemForm = this.builder.group(
       {
         id: [],
-        nome: ['', [Validators.required, Validators.minLength(3)]],
+        nome: ['', [Validators.required]],
         endereco: this.builder.group({
           id: [],
           logradouro: ['', Validators.required],

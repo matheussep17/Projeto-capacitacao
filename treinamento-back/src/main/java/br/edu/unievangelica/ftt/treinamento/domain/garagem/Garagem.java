@@ -24,8 +24,8 @@ public class Garagem extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	@NotEmpty @NotBlank
-	@Size(min = 3, max = 80)
-	@Column(name = "nome", length = 80, nullable = false, unique = true)
+	@Size(max = 80)
+	@Column(name = "nome", nullable = false)
 	private String nome;
 
 	@Valid

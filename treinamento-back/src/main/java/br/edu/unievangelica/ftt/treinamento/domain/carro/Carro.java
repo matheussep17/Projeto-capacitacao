@@ -20,33 +20,33 @@ public class Carro extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "fabricante", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "fabricante", nullable = false)
     private String fabricante;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "modelo", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "modelo", nullable = false)
     private String modelo;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "versao", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "versao", nullable = false)
     private String versao;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "descricao", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "descricao", nullable = false)
     private String descricao;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "cor", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "cor", nullable = false)
     private String cor;
 
     @NotEmpty @NotBlank
-    @Size(min = 3, max = 80)
-    @Column(name = "valor", length = 80, nullable = false)
+    @Size(max = 80)
+    @Column(name = "valor", nullable = false)
     private String valor;
 
     @Valid
