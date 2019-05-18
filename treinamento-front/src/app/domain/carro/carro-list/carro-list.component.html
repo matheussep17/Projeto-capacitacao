@@ -1,42 +1,44 @@
 <!-- Títuto da página -->
-<h1 class="page-title">Carro</h1>
+<div class="content-background p-2">
+  <h1 class="page-title white-title">Carro</h1>
 
-<!-- Botão para cadastrar -->
-<button class="btn btn-primary mb-3" routerLink="/carro/novo">
-  Cadastrar
-</button>
+  <!-- Botão para cadastrar -->
+  <button class="btn btn-primary mb-3" routerLink="/carro/novo">
+    Cadastrar
+  </button>
 
-<!-- Lista de garagens -->
-<table class="table table-bordered">
-  <!-- Cabeçalho da tabela -->
-  <thead>
-    <tr class="thead-dark">
-      <th class="text-center col-ml-1">Fabricante</th>
-      <th class="text-center col-ml-1">Modelo</th>
-      <th class="text-center col-ml-1">Ações</th>
-    </tr>
-  </thead>
-  <!-- Corpo da tabela -->
-  <tbody>
-    <tr *ngFor="let carro of carros">
-      <td>
-        <!-- Botão para visualizar -->
-        <button class="btn btn-link" [routerLink]="['/carro/visualizar', carro.id]">
-          {{ carro.fabricante }}
-        </button>
-      </td>
-      <td class="text-center">{{ carro.modelo }}</td>
-      <td class="text-center">
-        <!-- Botão para editar -->
-        <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', carro.id]">
-          Editar
-        </button>
+  <!-- Lista de garagens -->
+  <table class="table table-bordered">
+    <!-- Cabeçalho da tabela -->
+    <thead>
+      <tr class="thead-dark">
+        <th class="text-center col-ml-1">Fabricante</th>
+        <th class="text-center col-ml-1">Modelo</th>
+        <th class="text-center col-ml-1">Ações</th>
+      </tr>
+    </thead>
+    <!-- Corpo da tabela -->
+    <tbody>
+      <tr *ngFor="let carro of carros">
+        <td>
+          <!-- Botão para visualizar -->
+          <button class="btn btn-link" [routerLink]="['/carro/visualizar', carro.id]">
+            {{ carro.fabricante }}
+          </button>
+        </td>
+        <td class="text-center">{{ carro.modelo }}</td>
+        <td class="text-center">
+          <!-- Botão para editar -->
+          <button class="btn btn-primary ml-2" [routerLink]="['/carro/editar', carro.id]">
+            Editar
+          </button>
 
-        <!-- Botão para deletar -->
-        <button class="btn btn-primary ml-2" (click)="onDelete(carro.id)">
-          Deletar
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+          <!-- Botão para deletar -->
+          <button class="btn btn-primary ml-2" (click)="onDelete(carro.id)">
+            Deletar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
