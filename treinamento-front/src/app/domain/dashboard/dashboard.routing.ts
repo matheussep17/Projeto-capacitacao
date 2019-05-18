@@ -12,4 +12,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class DashboardRoutingModule {}
+export class DashboardRouting {}

@@ -1,4 +1,4 @@
-import { CarroRoutingModule } from './carro-routing.module';
+import { CarroRouting } from './carro.routing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './../../core/core.module';
 import { NgModule } from '@angular/core';
@@ -8,6 +8,6 @@ import { CarroFormComponent } from './carro-form/carro-form.component';
 
 @NgModule({
   declarations: [CarroFormComponent, CarroListComponent],
-  imports: [CommonModule, ReactiveFormsModule, CoreModule, CarroRoutingModule]
+  imports: [CommonModule, ReactiveFormsModule, CoreModule, CarroRouting]
 })
 export class CarroModule {}
