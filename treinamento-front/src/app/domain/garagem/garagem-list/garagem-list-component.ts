@@ -15,11 +15,11 @@ export class GaragemListComponent implements OnInit {
   constructor(private garagemService: GaragemService, private alertService: AlertService) {}
 
   ngOnInit() {
-    // Busca todas as mantenedoras
+    // Busca todas as garagens
     this.garagemService.findAll().subscribe(garagens => (this.garagens = garagens));
   }
 
-  // Método para deleta uma mantenedora
+  // Método para deleta uma garagem
   onDelete(id: number) {
     // Deleta mantenedora na API
     this.garagemService.deteleById(id).subscribe(() => {
