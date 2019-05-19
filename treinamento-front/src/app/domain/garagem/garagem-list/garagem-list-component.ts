@@ -21,9 +21,9 @@ export class GaragemListComponent implements OnInit {
 
   // Método para deleta uma garagem
   onDelete(id: number) {
-    // Deleta mantenedora na API
+    // Deleta garagem na API
     this.garagemService.deteleById(id).subscribe(() => {
-      // Remove a mantenedora da lista
+      // Remove a garagem da lista
       this.garagens = this.garagens.filter(garagem => garagem.id !== id);
 
       // Alerta com a mensagem de sucesso
