@@ -5,8 +5,7 @@ import { AlertService } from 'src/app/core/alert/alet.service';
 
 @Component({
   selector: 'app-pais-list',
-  templateUrl: './pais-list.component.html',
-  styleUrls: ['./pais-list.component.css']
+  templateUrl: './pais-list.component.html'
 })
 export class PaisListComponent implements OnInit {
 

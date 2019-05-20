@@ -8,8 +8,7 @@ import { AlertService } from 'src/app/core/alert/alet.service';
 
 @Component({
   selector: 'app-pais-form',
-  templateUrl: './pais-form.component.html',
-  styleUrls: ['./pais-form.component.css']
+  templateUrl: './pais-form.component.html'
 })
 export class PaisFormComponent implements OnInit {
 

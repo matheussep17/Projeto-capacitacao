@@ -8,7 +8,8 @@ import {CarroService} from '../carro.service';
 
 @Component({
   selector: 'app-carro-list',
-  templateUrl: './carro-list.component.html'
+  templateUrl: './carro-list.component.html',
+  styleUrls: ['./carro-list.component.css']
 })
 export class CarroListComponent implements OnInit {
   // Declarações de variáveis
