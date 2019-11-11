@@ -11,14 +11,27 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+  <div
+    [ngbCollapse]="isNavbarCollapsed"
+    class="collapse navbar-collapse"
+    id="navbarsDefault"
+  >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="dashboard">Home</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="dashboard"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="empresa"
+          >Empresa</a
+        >
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="garagem">Garagem</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="garagem"
+          >Garagem</a
+        >
       </li>
 
       <li class="nav-item">
@@ -26,7 +39,9 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="carro">Carro</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="carro"
+          >Carro</a
+        >
       </li>
     </ul>
   </div>

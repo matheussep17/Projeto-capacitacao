@@ -1,3 +1,4 @@
+import { EmpresaModule } from './domain/empresa/empresa.module';
 import { AppRouting } from './app.routing';
 import { DashboardModule } from './domain/dashboard/dashboard.module';
 import { CarroModule } from './domain/carro/carro.module';
@@ -23,7 +24,8 @@ import { DashboardComponent } from './domain/dashboard/dashboard.component';
     CoreModule,
     GaragemModule,
     CarroModule,
-    DashboardModule
+    DashboardModule,
+    EmpresaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
