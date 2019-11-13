@@ -43,6 +43,7 @@ export class EmpresaFormComponent implements OnInit {
       {
         id: [],
         nome: ['', [Validators.required]],
+        cnpj: ['', [Validators.required]],
         endereco: this.builder.group({
           id: [],
           logradouro: ['', Validators.required],

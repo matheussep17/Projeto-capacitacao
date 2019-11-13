@@ -24,6 +24,12 @@ public class Empresa extends AbstractEntity {
     @Column(name = "nome", nullable = false)
     private String nome;
 
+    @NotEmpty
+    @NotBlank
+    @Size(max = 14)
+    @Column(name = "cnpj", nullable = false)
+    private String cnpj;
+
     @Valid
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "endereco_id", referencedColumnName = "id")
