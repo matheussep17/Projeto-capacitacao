@@ -19,6 +19,11 @@ const routes: Routes = [
   {
     path: 'empresa',
     loadChildren: './domain/empresa/empresa.module#EmpresaModule'
+  },
+
+  {
+    path: 'cupom',
+    loadChildren: './domain/cupom/cupom.module#CupomModule'
   }
 ];
 

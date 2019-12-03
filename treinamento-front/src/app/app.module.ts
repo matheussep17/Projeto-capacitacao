@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { GaragemModule } from './domain/garagem/garagem.module';
 import { DashboardComponent } from './domain/dashboard/dashboard.component';
+import { CupomModule } from './domain/cupom/cupom.module';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent],
@@ -25,7 +26,8 @@ import { DashboardComponent } from './domain/dashboard/dashboard.component';
     GaragemModule,
     CarroModule,
     DashboardModule,
-    EmpresaModule
+    EmpresaModule,
+    CupomModule
   ],
   providers: [],
   bootstrap: [AppComponent]

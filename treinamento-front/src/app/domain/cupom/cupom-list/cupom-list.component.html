@@ -1,0 +1,42 @@
+<div class="content-background p-2">
+<!-- Título da página -->
+<h1 class="page-title">Cupom</h1>
+
+<!-- Botão para cadastrar -->
+<button class="btn btn-primary mb-3" routerLink="/cupom/novo">
+  Cadastrar
+</button>
+
+<!-- Lista de cupom -->
+<table class="table table-dark">
+  <!-- Cabeçalho da tabela -->
+  <thead>
+    <tr class="thead-dark">
+      <th class="text-center col-ml-1">Nome</th>
+      <th class="text-center col-ml-1">Ações</th>
+    </tr>
+  </thead>
+  <!-- Corpo da tabela -->
+  <tbody>
+    <tr *ngFor="let cupom of cupons">
+      <td class="text-center">
+        <!-- Botão para visualizar -->
+        <button class="btn btn-link" [routerLink]="['/cupom/visualizar', cupom.id]">
+          {{ cupom.nome }}
+        </button>
+      </td>
+      <td class="text-center">
+        <!-- Botão para editar -->
+        <button class="btn btn-primary ml-2" [routerLink]="['/cupom/editar', cupom.id]">
+          Editar
+        </button>
+
+        <!-- Botão para deletar -->
+        <button class="btn btn-primary ml-2" (click)="onDelete(cupom.id)">
+          Deletar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
