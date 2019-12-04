@@ -1,4 +1,18 @@
-* {
-  color: white;
+
+h1{
+  color:purple;
+}
+h2{
+  color: aqua;
+}
+#cadastro{
+  color: red;
+  text-align: justify;
+  padding-top: 30px;
+  font-size: 18px;
+}
+
+h1,h2{
   padding-top: 20px;
+  text-align: center;
 }
